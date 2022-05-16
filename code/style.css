@@ -1,0 +1,86 @@
+@media screen and (max-width: 400px) {
+    #calculadora{
+        display: flex;
+        justify-content: center;
+    }
+    #container{
+        margin-top: 4em;
+        width: 300px;
+        height: 350px;
+        display: grid;
+        gap: 1em;
+        grid-template-areas:"av av av av"
+                            "ac ara ap ad"
+                            "a7 a8 a9 am"
+                            "a4 a5 a6 asu"
+                            "a1 a2 a3 aso"
+                            "apon a0 ar aso"
+    }
+    #valor{grid-area: av;}
+    .botao-soma{grid-area: aso;}
+    .botao-sub{grid-area: asu;}
+    .botao-div{grid-area: ad;}
+    .botao-mult{grid-area: am;}
+    .botao-proc{grid-area: apor;}
+    .botao-pon{grid-area: apon;}
+    .botao-raiz{grid-area: ara;}
+    .botao-limpar{grid-area: ac;}
+    .botao-resultado{grid-area: ar;}
+    .botao0{grid-area: a0;}
+    .botao1{grid-area: a1;}
+    .botao2{grid-area: a2;}
+    .botao3{grid-area: a3;}
+    .botao4{grid-area: a4;}
+    .botao5{grid-area: a5;}
+    .botao6{grid-area: a6;}
+    .botao7{grid-area: a7;}
+    .botao8{grid-area: a8;}
+    .botao9{grid-area: a9;}
+
+    .bt{}
+
+
+
+    /* fim do media querie */
+}
+
+#calculadora{
+    display: flex;
+    justify-content: center;
+}
+#container{
+    margin-top: 4em;
+    width: 400px;
+    height: 450px;
+    display: grid;
+    gap: 1em;
+    grid-template-areas:"av av av av"
+                        "ac ara ap ad"
+                        "a7 a8 a9 am"
+                        "a4 a5 a6 asu"
+                        "a1 a2 a3 aso"
+                        "apon a0 ar aso"
+}
+#valor{grid-area: av;}
+.botao-soma{grid-area: aso;}
+.botao-sub{grid-area: asu;}
+.botao-div{grid-area: ad;}
+.botao-mult{grid-area: am;}
+.botao-proc{grid-area: apor;}
+.botao-pon{grid-area: apon;}
+.botao-raiz{grid-area: ara;}
+.botao-limpar{grid-area: ac;}
+.botao-resultado{grid-area: ar;}
+.botao0{grid-area: a0;}
+.botao1{grid-area: a1;}
+.botao2{grid-area: a2;}
+.botao3{grid-area: a3;}
+.botao4{grid-area: a4;}
+.botao5{grid-area: a5;}
+.botao6{grid-area: a6;}
+.botao7{grid-area: a7;}
+.botao8{grid-area: a8;}
+.botao9{grid-area: a9;}
+
+.bt{}
+
