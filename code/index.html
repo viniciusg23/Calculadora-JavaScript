@@ -9,43 +9,8 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body onkeydown="pressKey(event)">
-    <!-- 
-    <div id="calculadora">
-        <form id="container">
-            <input id="valor" type="text">
-            <button class="botao-soma bt" value="+" onclick="operacao(this.value)">&#43;</button>
-            <input class="botao-sub bt" type="button" value="-" onclick="operacao(this.value)">
-            <input class="botao-div bt" type="button" value="/" onclick="operacao(this.value)">
-            <input class="botao-mult bt" type="button" value="*" onclick="operacao(this.value)">
-            <input class="botao-raiz bt" type="button" value="#">
-            <input class="botao-porc bt" type="button" value="#">
-            <input class="botao-pon bt" type="button" value="." onclick="operacao(this.value)">
-            <input class="botao-limpar bt" type="button" value="C" onclick="limpar()">
-            <input class="botao-resultado bt" type ="button" value="=" onclick="resultado()">
-            
-            <input class="botao0 bt" type="button" value="0" onclick="operacao(this.value)">
-            <input class="botao1 bt" type="button" value="1" onclick="operacao(this.value)">
-            <input class="botao2 bt" type="button" value="2" onclick="operacao(this.value)">
-            <input class="botao3 bt" type="button" value="3" onclick="operacao(this.value)">
-            <input class="botao4 bt" type="button" value="4" onclick="operacao(this.value)">
-            <input class="botao5 bt" type="button" value="5" onclick="operacao(this.value)">
-            <input class="botao6 bt" type="button" value="6" onclick="operacao(this.value)">
-            <input class="botao7 bt" type="button" value="7" onclick="operacao(this.value)">
-            <input class="botao8 bt" type="button" value="8" onclick="operacao(this.value)">
-            <input class="botao9 bt" type="button" value="9" onclick="operacao(this.value)">
-        </form>
-    </div
-     -->
 
-     <!-- <div class="d-flex justify-content-center mt-5">
-        <div class="card"  style="width: 400px;">
-            <button class="btn btn-success">Conversão de Bases</button>
-        </div>
-     </div> -->
-     
-
-
-    <div class="d-flex justify-content-center mt-5">
+    <div class="d-flex justify-content-center mt-5 px-5">
 
         <div class="" style="width: 400px;">
             <div class="row high">
@@ -55,25 +20,25 @@
                 <button type="keyC" class="btn btn-outline-danger col" onclick="cleaner()">C</button>
                 <button type="#" class="btn btn-outline-secondary col">#</button>
                 <button type="sqrt" class="btn btn-outline-secondary col" onclick="op('sqrt')">&radic;</button>
-                <button type="keydiv" class="btn btn-outline-primary col" onclick="op('/')">&divide;</button>
+                <button type="keydiv" class="btn btn-outline-primary col operator" onclick="op('/')">&divide;</button>
             </div>
             <div class="row gap-1 mt-1 high">
                 <button type="key7" class="btn btn-outline-dark col" onclick="num(7)">7</button>
                 <button type="key8" class="btn btn-outline-dark col" onclick="num(8)">8</button>
                 <button type="key9" class="btn btn-outline-dark col" onclick="num(9)">9</button>
-                <button type="keymult" class="btn btn-outline-primary col" onclick="op('*')">&times;</button>
+                <button type="keymult" class="btn btn-outline-primary col operator" onclick="op('*')">&times;</button>
             </div>
             <div class="row gap-1 mt-1 high">
                 <button type="key4" class="btn btn-outline-dark col" onclick="num(4)">4</button>
                 <button type="key5" class="btn btn-outline-dark col" onclick="num(5)">5</button>
                 <button type="key6" class="btn btn-outline-dark col" onclick="num(6)">6</button>
-                <button type="key-" class="btn btn-outline-primary col" onclick="op('-')">&minus;</button>
+                <button type="key-" class="btn btn-outline-primary col operator" onclick="op('-')">&minus;</button>
             </div>
             <div class="row gap-1 mt-1 high">
                 <button type="key1" class="btn btn-outline-dark col" onclick="num(1)">1</button>
                 <button type="key2" class="btn btn-outline-dark col" onclick="num(2)">2</button>
                 <button type="key3" class="btn btn-outline-dark col" onclick="num(3)">3</button>
-                <button type="keysum" class="btn btn-outline-primary col" onclick="op('+')">+</button>
+                <button type="keysum" class="btn btn-outline-primary col operator" onclick="op('+')">+</button>
             </div>
             <div class="row gap-1 mt-1 high">
                 <button type="keydot" class="btn btn-outline-dark col" onclick="num('.')">.</button>
