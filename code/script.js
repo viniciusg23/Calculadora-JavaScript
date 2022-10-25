@@ -24,7 +24,6 @@ function pressKey(key){ //get the key on keyboard
         num(key.key);
     }
     else if(!isNaN(key.key) == true){
-        console.log("tecla: "+key.key);
         click(key.key);
         num(key.key);
     }
@@ -36,9 +35,8 @@ function pressKey(key){ //get the key on keyboard
 }
 
 function click(button){ //animate the buttons when it have a click 
-    
-    // console.log(button);
     $(`[type = key${button}]`).addClass("active");
+
     window.setTimeout(() =>{
         $(`[type = key${button}]`).removeClass("active");
     }, 200);
@@ -55,14 +53,11 @@ function num(num){ //add a number in the buffer
         buffer += `${num}`;
         $("#text").text(buffer);
     }
-    
-    // console.log(buffer)
 }
 
 function op(opt){ //execute a operation
 
     operation += `${buffer}`; //add the buffer value on operation string
-    // console.log(operation)
 
     if(operation != ""){ //does not allow operators before numbers
         if(operation.slice(-1) == "+" || operation.slice(-1) == "-" || operation.slice(-1) == "/" || operation.slice(-1) == "*"){
@@ -87,11 +82,15 @@ function op(opt){ //execute a operation
                 $("#text").text(operation);
                 buffer = "";
             }
+            else if(opt == "cs"){
+                operation = `${eval(operation) * -1}`;
+                $("#text").text(operation);
+                buffer = "";
+            }
             else{ // others operators
                 press(opt, 1);
                 $("#text").text(eval(operation));
                 operation = `${eval(operation)}${opt}`;
-                // console.log(operation);
                 buffer = "";
             }
     
