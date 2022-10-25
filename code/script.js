@@ -61,11 +61,23 @@ function op(opt){ //execute a operation
 
     if(operation != ""){ //does not allow operators before numbers
         if(operation.slice(-1) == "+" || operation.slice(-1) == "-" || operation.slice(-1) == "/" || operation.slice(-1) == "*"){
+            if(opt == "sqrt"){
+                buffer = `${Math.sqrt(eval(operation.substring(0, operation.length - 1)))}`;
+                $("#text").text(buffer);
+                operation = "";
+            }
+            else if(opt == "cs"){
+                buffer = `${eval(operation.substring(0, operation.length - 1)) * -1}`;
+                $("#text").text(buffer);
+                operation = "";
+            }
+            else{
+                let lastOp = operation.slice(-1); // get the old operator
 
-            let lastOp = operation.slice(-1); // get the old operator
+                operation = operation.replace(lastOp, opt); //replace the old operator with the newest
+            }
 
-            operation = operation.replace(lastOp, opt); //replace the old operator with the newest
-
+            
             press("", 0); //change the active button 
             press(opt, 1);
 
@@ -78,14 +90,14 @@ function op(opt){ //execute a operation
                 $("#text").text(buffer);
             }
             else if(opt == 'sqrt'){ //result of sqrt
-                operation = `${Math.sqrt(eval(operation))}`;
-                $("#text").text(operation);
-                buffer = "";
+                buffer = `${Math.sqrt(eval(operation))}`;
+                $("#text").text(buffer);
+                operation = "";
             }
             else if(opt == "cs"){
-                operation = `${eval(operation) * -1}`;
-                $("#text").text(operation);
-                buffer = "";
+                buffer = `${eval(operation) * -1}`;
+                $("#text").text(buffer);
+                operation = "";
             }
             else{ // others operators
                 press(opt, 1);
@@ -122,5 +134,6 @@ function press(operator, action){ //add and remove the active class for the oper
 function cleaner(){ //restart the calculator
     buffer = "";
     operation = "";
+    press("", 0);
     $("#text").text("");
 }
