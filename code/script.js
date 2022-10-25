@@ -1,25 +1,86 @@
+let buffer = ""
+let operation = ""
 
+function pressKey(key){34
+    if(key.key == "+"){
+        click("sum")
+        op(key.key);
+    }
+    else if( key.key == "-"){
+        click(key.key)
+        op(key.key);
+    }
+    else if(key.key == "/"){
+        click("div")
+        op(key.key);
+    }
+    else if(key.key == "*"){
+        click("mult")
+        op(key.key);
+    }
+    else if(key.key == "."){
+        click("dot");
+        num(key.key);
+    }
+    else if(!isNaN(key.key) == true){
+        click(key.key);
+        num(key.key);
+    }
+    else if(key.key == 'Enter'){
+        click("eq")
+        op('=');
+    }
 
-let operacao = function(x){
-    let valor = document.getElementById("valor");
-    valor.value = valor.value + x;
 }
 
-let limpar = function(){
-    let valor = document.getElementById("valor");
-    valor.value = "";
+function click(button){
+    
+    console.log(button);
+    $(`[type = key${button}]`).addClass("active");
+    window.setTimeout(() =>{
+        $(`[type = key${button}]`).removeClass("active");
+    }, 200);
+}   
+
+function num(num){
+    let valid = true;
+
+    if(buffer.includes('.') == true && num == '.')
+        valid = false;
+
+    if(valid){
+        buffer += `${num}`
+        $("#text").text(buffer);
+    }
+    
+    console.log(buffer)
 }
 
-let prox = function(a){
-    let valor = document.getElementById("valor");
-    valor.value = a;
+function op(opt){
+
+    operation += `${buffer}`
+    console.log(operation)
+
+    if(opt == '='){
+        buffer = eval(operation);
+        operation = ""
+        $("#text").text(buffer);
+    }
+    else if(opt == 'sqrt'){
+        operation = `${Math.sqrt(eval(operation))}`
+        $("#text").text(operation);
+        buffer = "";
+    }
+    else{
+        $("#text").text(eval(operation));
+        operation = `${eval(operation)}${opt}`
+        console.log(operation)
+        buffer = ""
+    }
 }
 
-let resultado = function(){
-    let valor = (document.getElementById("valor").value);
-    let result = eval(valor);
-    console.log(result);
-    prox(result);
+function cleaner(){
+    buffer = "";
+    operation = "";
+    $("#text").text("");
 }
-
-

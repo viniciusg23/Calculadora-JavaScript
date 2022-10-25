@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body onkeydown="pressKey(event)">
+    <!-- 
     <div id="calculadora">
         <form id="container">
             <input id="valor" type="text">
-            <input class="botao-soma bt" type="button" value="+" onclick="operacao(this.value)">
+            <button class="botao-soma bt" value="+" onclick="operacao(this.value)">&#43;</button>
             <input class="botao-sub bt" type="button" value="-" onclick="operacao(this.value)">
             <input class="botao-div bt" type="button" value="/" onclick="operacao(this.value)">
             <input class="botao-mult bt" type="button" value="*" onclick="operacao(this.value)">
@@ -20,7 +22,7 @@
             <input class="botao-pon bt" type="button" value="." onclick="operacao(this.value)">
             <input class="botao-limpar bt" type="button" value="C" onclick="limpar()">
             <input class="botao-resultado bt" type ="button" value="=" onclick="resultado()">
-            <!-- ---------- -->
+            
             <input class="botao0 bt" type="button" value="0" onclick="operacao(this.value)">
             <input class="botao1 bt" type="button" value="1" onclick="operacao(this.value)">
             <input class="botao2 bt" type="button" value="2" onclick="operacao(this.value)">
@@ -31,11 +33,63 @@
             <input class="botao7 bt" type="button" value="7" onclick="operacao(this.value)">
             <input class="botao8 bt" type="button" value="8" onclick="operacao(this.value)">
             <input class="botao9 bt" type="button" value="9" onclick="operacao(this.value)">
-
         </form>
+    </div
+     -->
+
+     <!-- <div class="d-flex justify-content-center mt-5">
+        <div class="card"  style="width: 400px;">
+            <button class="btn btn-success">Conversão de Bases</button>
+        </div>
+     </div> -->
+     
+
+
+    <div class="d-flex justify-content-center mt-5">
+
+        <div class="" style="width: 400px;">
+            <div class="row high">
+                <div id="text" class="border col-12 d-flex align-items-center h3 justify-content-end" ></div>
+            </div>
+            <div class="row gap-1 mt-2 high">
+                <button type="keyC" class="btn btn-outline-danger col" onclick="cleaner()">C</button>
+                <button type="#" class="btn btn-outline-secondary col">#</button>
+                <button type="sqrt" class="btn btn-outline-secondary col" onclick="op('sqrt')">&radic;</button>
+                <button type="keydiv" class="btn btn-outline-primary col" onclick="op('/')">&divide;</button>
+            </div>
+            <div class="row gap-1 mt-1 high">
+                <button type="key7" class="btn btn-outline-dark col" onclick="num(7)">7</button>
+                <button type="key8" class="btn btn-outline-dark col" onclick="num(8)">8</button>
+                <button type="key9" class="btn btn-outline-dark col" onclick="num(9)">9</button>
+                <button type="keymult" class="btn btn-outline-primary col" onclick="op('*')">&times;</button>
+            </div>
+            <div class="row gap-1 mt-1 high">
+                <button type="key4" class="btn btn-outline-dark col" onclick="num(4)">4</button>
+                <button type="key5" class="btn btn-outline-dark col" onclick="num(5)">5</button>
+                <button type="key6" class="btn btn-outline-dark col" onclick="num(6)">6</button>
+                <button type="key-" class="btn btn-outline-primary col" onclick="op('-')">&minus;</button>
+            </div>
+            <div class="row gap-1 mt-1 high">
+                <button type="key1" class="btn btn-outline-dark col" onclick="num(1)">1</button>
+                <button type="key2" class="btn btn-outline-dark col" onclick="num(2)">2</button>
+                <button type="key3" class="btn btn-outline-dark col" onclick="num(3)">3</button>
+                <button type="keysum" class="btn btn-outline-primary col" onclick="op('+')">+</button>
+            </div>
+            <div class="row gap-1 mt-1 high">
+                <button type="keydot" class="btn btn-outline-dark col" onclick="num('.')">.</button>
+                <button type="key0" class="btn btn-outline-dark col" onclick="num(0)">0</button>
+                <button type="keyeq" class="btn btn-outline-primary col" onclick="op('=')">=</button>
+            
+                
+            </div>
+        </div>
     </div>
+    
+    
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
