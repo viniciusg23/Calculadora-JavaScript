@@ -10,45 +10,49 @@
 </head>
 <body onkeydown="pressKey(event)">
 
-    <div class="d-flex justify-content-center mt-5 px-5">
+    <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center p-4 py-5 rounded mobile" style="">
 
-        <div class="" style="width: 400px;">
-            <div class="row high">
-                <div id="text" class="border col-12 d-flex align-items-center h3 justify-content-end" ></div>
-            </div>
-            <div class="row gap-1 mt-2 high">
-                <button type="keyC" class="btn btn-outline-danger col" onclick="cleaner()">C</button>
-                <button type="keyChangeSingal" class="btn btn-outline-secondary col" onclick="op('cs')">-/+</button>
-                <button type="sqrt" class="btn btn-outline-secondary col" onclick="op('sqrt')">&radic;</button>
-                <button type="keydiv" class="btn btn-outline-primary col operator" onclick="op('/')">&divide;</button>
-            </div>
-            <div class="row gap-1 mt-1 high">
-                <button type="key7" class="btn btn-outline-dark col" onclick="num(7)">7</button>
-                <button type="key8" class="btn btn-outline-dark col" onclick="num(8)">8</button>
-                <button type="key9" class="btn btn-outline-dark col" onclick="num(9)">9</button>
-                <button type="keymult" class="btn btn-outline-primary col operator" onclick="op('*')">&times;</button>
-            </div>
-            <div class="row gap-1 mt-1 high">
-                <button type="key4" class="btn btn-outline-dark col" onclick="num(4)">4</button>
-                <button type="key5" class="btn btn-outline-dark col" onclick="num(5)">5</button>
-                <button type="key6" class="btn btn-outline-dark col" onclick="num(6)">6</button>
-                <button type="key-" class="btn btn-outline-primary col operator" onclick="op('-')">&minus;</button>
-            </div>
-            <div class="row gap-1 mt-1 high">
-                <button type="key1" class="btn btn-outline-dark col" onclick="num(1)">1</button>
-                <button type="key2" class="btn btn-outline-dark col" onclick="num(2)">2</button>
-                <button type="key3" class="btn btn-outline-dark col" onclick="num(3)">3</button>
-                <button type="keysum" class="btn btn-outline-primary col operator" onclick="op('+')">+</button>
-            </div>
-            <div class="row gap-1 mt-1 high">
-                <button type="keydot" class="btn btn-outline-dark col" onclick="num('.')">.</button>
-                <button type="key0" class="btn btn-outline-dark col" onclick="num(0)">0</button>
-                <button type="keyeq" class="btn btn-outline-primary col" onclick="op('=')">=</button>
-            
+            <div class="size" style="">
+                <div class="row high">
+                    <div id="text" class="border border-primary col-12 d-flex align-items-center h3 justify-content-end" ></div>
+                </div>
+                <div class="row gap-1 mt-2 high">
+                    <button type="keyC" class="btn btn-outline-danger col" onclick="cleaner()">C</button>
+                    <button type="keyChangeSingal" class="btn btn-outline-secondary col" onclick="op('cs')">-/+</button>
+                    <button type="sqrt" class="btn btn-outline-secondary col" onclick="op('sqrt')">&radic;</button>
+                    <button type="keydiv" class="btn btn-outline-primary col operator" onclick="op('/')">&divide;</button>
+                </div>
+                <div class="row gap-1 mt-1 high">
+                    <button type="key7" class="btn btn-outline-dark col" onclick="num(7)">7</button>
+                    <button type="key8" class="btn btn-outline-dark col" onclick="num(8)">8</button>
+                    <button type="key9" class="btn btn-outline-dark col" onclick="num(9)">9</button>
+                    <button type="keymult" class="btn btn-outline-primary col operator" onclick="op('*')">&times;</button>
+                </div>
+                <div class="row gap-1 mt-1 high">
+                    <button type="key4" class="btn btn-outline-dark col" onclick="num(4)">4</button>
+                    <button type="key5" class="btn btn-outline-dark col" onclick="num(5)">5</button>
+                    <button type="key6" class="btn btn-outline-dark col" onclick="num(6)">6</button>
+                    <button type="key-" class="btn btn-outline-primary col operator" onclick="op('-')">&minus;</button>
+                </div>
+                <div class="row gap-1 mt-1 high">
+                    <button type="key1" class="btn btn-outline-dark col" onclick="num(1)">1</button>
+                    <button type="key2" class="btn btn-outline-dark col" onclick="num(2)">2</button>
+                    <button type="key3" class="btn btn-outline-dark col" onclick="num(3)">3</button>
+                    <button type="keysum" class="btn btn-outline-primary col operator" onclick="op('+')">+</button>
+                </div>
+                <div class="row gap-1 mt-1 high">
+                    <button type="keydot" class="btn btn-outline-dark col" onclick="num('.')">.</button>
+                    <button type="key0" class="btn btn-outline-dark col" onclick="num(0)">0</button>
+                    <button type="keyeq" class="btn btn-outline-primary col" onclick="op('=')">=</button>
                 
+                    
+                </div>
             </div>
         </div>
     </div>
+    
+    
     
     
 
